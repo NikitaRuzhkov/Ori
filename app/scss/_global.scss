@@ -1,3 +1,24 @@
-body{
+body {
+  @extend %monserat-400;
+  font-size: 16px;
+}
 
+
+.container {
+  max-width: 1355px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.wrapper {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+.title{
+  @extend %harabara;
+  font-size: 36px;
+  color: $title;
+  text-align: center;
+  text-transform: uppercase;
 }

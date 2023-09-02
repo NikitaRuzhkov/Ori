@@ -1,11 +1,450 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
+
+
+.header {
+  // &__bg {
+  //   background-image: url('../images/bg-header.png');
+  //   height: 1033px;
+  // }
+
+
+  &__inner {
+
+    box-shadow: 0px 4px 12px rgba(24, 9, 96, 0.10);
+
+  }
+
+  &__top {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 100;
+  }
+
+
+  &__list {
+    display: flex;
+    gap: 25px;
+    position: relative;
+  }
+
+  &__link {
+    color: #0D6EB7;
+    @extend %monserat-700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover {
+      color: $pick;
+
+      path {
+        fill: $pick;
+      }
+    }
+  }
+
+  &__btn {
+    height: 42px;
+    width: 160px;
+    background-color: inherit;
+    border: none;
+    border: 2px solid $bg;
+    border-radius: 10px;
+    @extend %monserat-700;
+    color: $bg;
+    cursor: pointer;
+    padding-top: 2px;
+  }
+
+  &__services {
+    position: absolute;
+    background-color: rgba(33, 33, 33, 0.80);
+    border-top: 3px solid $pick;
+    top: 25px;
+    left: 0;
+    transform: translateY(-500%);
+    transition: all .3s;
+    z-index: 10;
+  }
+
+  &__services--active {
+    transform: translateY(0);
+    transition: all .3s;
+  }
+
+  &__servises-item {
+    padding: 15px 5px 10px 15px;
+  }
+
+  &__link-service--active {
+    color: $pick;
+
+    svg {
+      path {
+        fill: $pick;
+      }
+    }
+  }
+
+  &__service-link {
+    @extend %monserat-700;
+    color: #fff;
+
+    &:hover {
+      color: $pick;
+    }
+
+  }
+}
+
+
+.about {
+  margin-bottom: 120px;
+
+  &__items {
+    height: 960px;
+
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__item {
+    height: 960px;
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-size: cover;
+  }
+
+  &__title {
+    padding-top: 220px;
+    @extend %monserat-700;
+    font-size: 44px;
+    line-height: 60px;
+    color: #fff;
+    width: 590px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @extend %monserat-400;
+    color: #fff;
+    width: 565px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+
+  &__box {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__link {
+    height: 42px;
+    width: 160px;
+    background-color: inherit;
+    border: none;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    @extend %monserat-700;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $bg;
+      border: none;
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    content: '';
+    bottom: 300px;
+    left: 275px;
+    display: flex;
+    gap: 20px;
+    font-size: 0;
+
+    button {
+      background-color: inherit;
+      border: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    }
+
+  }
+
+  .slick-active {
+    background-color: #fff;
+    border-radius: 50%;
+  }
+}
+
+
+.technologies {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  @extend %monserat-400;
+
+  font-size: 24px;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    @extend %monserat-400;
+
+    line-height: 38px;
+    margin-bottom: 30px;
+
+  }
+
+  &__pick {
+    color: $pick;
+    @extend %monserat-700;
+  }
+
+  &__and {
+    color: $title;
+    @extend %monserat-700;
+  }
+
+  &__item {
+    width: 65px;
+    height: 65px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__apps {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 30px;
+  }
+
+  &__item-one {
+    background-color: $bg;
+  }
+
+  &__item-two {
+    background-color: $pick;
+  }
+
+  &__item-three {
+    background-color: $light;
+  }
+
+  &__about {
+    margin-bottom: 120px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 3px 16px 2px rgba(29, 51, 107, 0.15);
+    padding: 30px;
+    margin-bottom: 120px;
+  }
+
+  &__star-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__reviews {
+    font-size: 16px;
+    padding-top: 4px;
+  }
+
+  &__link {
+    background-color: $bg;
+    color: #fff;
+    line-height: 36px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    @extend %monserat-700;
+  }
+
+  &__num {
+    @extend %monserat-700;
+    font-size: 18px;
+    color: #242424;
+  }
+
+}
+
+.services {
+  margin-bottom: 70px;
+
+  &__items {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    width: 550px;
+  }
+
+  &__item-title {
+    @extend %monserat-700;
+    color: $mediub-blue;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    @extend %monserat-400;
+    line-height: 26px;
+    color: #242424;
+  }
+}
+
+.looking {
+  height: 640px;
+  background-image: url('../images/bg-looking.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 120px;
+
+  &__title {
+    @extend %harabara;
+    font-size: 44px;
+    line-height: 60px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+
+  &__link {
+    width: 160px;
+    height: 40px;
+    color: $bg;
+    @extend %monserat-700;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 15px 35px;
+    border-radius: 8px;
+    border: 2px solid $bg;
+  }
+}
+
+.achievements {
+  margin-bottom: 120px;
+
+  &__inner {
+    display: flex;
+    gap: 25px;
+
+  }
+
+  &__text {
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__text-one {
+    color: #000;
+    @extend %monserat-700;
+    margin-top: -100px;
+  }
+
+  &__text-two {
+    @extend %monserat-700;
+    color: $medium;
+  }
+
+  &__items {
+    width: 320px;
+    height: 400px;
+    background-color: #F4F7FD;
+    border-radius: 16px;
+    color: #242424;
+  }
+
+  &__img {
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  &__text {
+    padding-top: 40px;
+  }
+}
+
+.partners {
+  margin-bottom: 120px;
+  &__title {
+    margin-bottom: 80px;
+  }
+  &__items{
+    display: grid;
+    grid-gap: 40px 25px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__item{
+    width: 320px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0px 3px 16px 4px rgba(29, 51, 107, 0.10);
+  }
+  &__img{
+    object-fit: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 @import 'media';
-
-
