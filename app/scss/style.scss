@@ -411,15 +411,18 @@
 
 .partners {
   margin-bottom: 120px;
+
   &__title {
     margin-bottom: 80px;
   }
-  &__items{
+
+  &__items {
     display: grid;
     grid-gap: 40px 25px;
     grid-template-columns: repeat(4, 1fr);
   }
-  &__item{
+
+  &__item {
     width: 320px;
     height: 160px;
     display: flex;
@@ -427,13 +430,228 @@
     border-radius: 16px;
     box-shadow: 0px 3px 16px 4px rgba(29, 51, 107, 0.10);
   }
-  &__img{
+
+  &__img {
     object-fit: none;
   }
 }
 
+.contacts {
+  margin-bottom: 215px;
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__text {
+    @extend %monserat-700;
+    color: #242424;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__text-info {
+    @extend %monserat-400;
+    color: #242424;
+    text-align: center;
+    margin-bottom: 105px;
+  }
+
+  &__adress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    @extend %monserat-400;
+    font-size: 20px;
+    color: #242424;
+    text-transform: capitalize;
+  }
+
+  &__about {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    width: 420px;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 3px 16px 2px rgba(29, 51, 107, 0.15);
+    padding: 40px;
+    margin-right: 85px;
+    position: relative;
 
 
+    &::before {
+      position: absolute;
+      content: '';
+      top: -50px;
+      left: -80px;
+      width: 150px;
+      height: 150px;
+      background-image: url('../images/contact/2.png');
+      background-repeat: no-repeat;
+      z-index: -1;
+
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: -50px;
+      right: -80px;
+      width: 126px;
+      height: 230px;
+      background-image: url('../images/contact/3.png');
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  &__input {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #D7D7D7;
+    background: #FFF;
+    margin-bottom: 20px;
+    width: 340px;
+    outline: none;
+
+    &::placeholder {
+      color: #A9A9A9;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    width: 340px;
+    height: 80px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #D7D7D7;
+    background: #FFF;
+    outline: none;
+    margin-bottom: 30px;
+
+    &::placeholder {
+      color: #A9A9A9;
+
+    }
+  }
+
+  &__btn {
+    border-radius: 6px;
+    background: #2DA531;
+    width: 340px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    @extend %monserat-700;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -50px;
+      left: -150px;
+      width: 150px;
+      height: 150px;
+      background-image: url('../images/contact/1.png');
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+}
+
+.footer {
+  &__top {
+    background-image: url('../images/footer/bg-footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 60px;
+  }
+
+  &__top-items {
+    padding-top: 150px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__img {
+    margin-bottom: 50px;
+    margin-top: -10px;
+  }
+
+  &__links {
+    width: 230px;
+    display: flex;
+    gap: 45px;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    &:hover {
+      svg {
+        path {
+          fill: #66D6A0;
+        }
+      }
+    }
+  }
+
+  &__item-title {
+    display: block;
+    @extend %monserat-700;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+
+  }
+
+  &__item-list {
+    padding-left: 20px;
+    margin-top: 17px;
+  }
+
+  &__item-link {
+    @extend %monserat-400;
+    color: #fff;
+  }
+
+  &__bottom {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      color: #4C4C4C;
+    }
+
+    a {
+      color: #4C4C4C;
+    }
+  }
+  &__bottom-box{
+    display: flex;
+   gap: 150px;
+  }
+}
 
 
 

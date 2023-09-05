@@ -1,6 +1,17 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   @extend %monserat-400;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 
 
@@ -15,7 +26,8 @@ body {
   margin: 0 auto;
   padding: 0 5px;
 }
-.title{
+
+.title {
   @extend %harabara;
   font-size: 36px;
   color: $title;
