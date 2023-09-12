@@ -1,9 +1,10 @@
 $(function () {
 
 
-  $('.technologies__star').rateYo({
+  $('.technologies__star,.blog__star').rateYo({
     starWidth: "24px",
     ratedFill: "#06B25F",
+    normalFill: "#e1e1e1",
     readOnly: true,
   });
 
