@@ -34,3 +34,36 @@ main {
   text-align: center;
   text-transform: uppercase;
 }
+
+.breadcrumbs {
+  padding-top: 40px;
+
+  &__inner {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__link {
+    color: $title;
+    line-height: 26px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 10px;
+      top: 4px;
+      right: -20px;
+      background-image: url('../images/icons/bradcrumbs.svg');
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  &__link-last {
+    &::after {
+      display: none;
+    }
+  }
+}
