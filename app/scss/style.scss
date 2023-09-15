@@ -1280,6 +1280,7 @@
 
 .recent {
   margin-bottom: 100px;
+
   &__title {
     margin-bottom: 100px;
   }
@@ -1350,5 +1351,93 @@
     right: -30px;
   }
 }
+
+.team-one {
+  padding-top: 90px;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  .blog-one__author-name {
+    font-size: 44px;
+    text-transform: uppercase;
+    color: $title;
+  }
+
+  .blog-one__author-about {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b1b1b1;
+  }
+
+  .blog-one__author-job {
+    @extend %harabara;
+    font-size: 24px;
+    text-transform: uppercase;
+    border-bottom: none;
+    padding-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .blog-one__author-about {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    float: left;
+  }
+
+  &__text {
+    line-height: 26px;
+  }
+}
+
+
+.about-us {
+  margin-bottom: 100px;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: left;
+    line-height: 50px;
+  }
+
+  &__title-color {
+    color: $mediub-blue;
+  }
+
+  &__text {
+    line-height: 26px;
+    width: 550px;
+  }
+
+  &__text-color {
+    color: #000;
+    @extend %monserat-700
+  }
+  &__text-color-an{
+    color: $mediub-blue;
+  }
+  &__text-title{
+    color: $mediub-blue;
+    @extend %monserat-700;
+    font-size: 24px;  
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 @import 'media';
