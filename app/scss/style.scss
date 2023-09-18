@@ -1396,6 +1396,7 @@
 
 .about-us {
   margin-bottom: 100px;
+
   &__item {
     display: flex;
     justify-content: space-between;
@@ -1420,16 +1421,57 @@
     color: #000;
     @extend %monserat-700
   }
-  &__text-color-an{
+
+  &__text-color-an {
     color: $mediub-blue;
   }
-  &__text-title{
+
+  &__text-title {
     color: $mediub-blue;
     @extend %monserat-700;
-    font-size: 24px;  
+    font-size: 24px;
   }
 }
 
+
+.team-page {
+  margin-top: 85px;
+  margin-bottom: 125px;
+
+  &__title {
+    margin-bottom: 75px;
+  }
+&__items{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px 
+}
+  &__item {
+    width: 322px;
+    box-shadow: 0px 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: 16px;
+  }
+
+  &__img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 332px;
+    width: 322px;
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: 16px;
+  }
+  &__info-title{
+    @extend %harabara;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 38px;
+    color: $mediub-blue;
+    margin-bottom: 8px;
+  }
+}
 
 
 
