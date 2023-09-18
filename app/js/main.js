@@ -38,6 +38,7 @@ $(function () {
     $('.header__services').toggleClass('header__services--active')
     $('.header__link-service').toggleClass('header__link-service--active')
   });
+  
   $('.header__link-technologies').on('click', function () {
     $('.header__technologies').toggleClass('header__technologies--active')
     $('.header__link-technologies').toggleClass('header__link-technologies--active')
@@ -46,7 +47,13 @@ $(function () {
     $('.header__about').toggleClass('header__about--active')
     $('.header__link-about').toggleClass('header__link-about--active')
   });
+  $('.join__item-top').on('click', function () {
+    $(this).siblings().slideToggle()
+    $('.join__item-link').toggleClass('join__item-link--active')
+  });
 
+
+ 
 
 
 
