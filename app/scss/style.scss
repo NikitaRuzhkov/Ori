@@ -1570,8 +1570,9 @@
   &__info {
     display: none;
   }
+
   &__item-link--active {
-    &::after{
+    &::after {
       transform: rotate(180deg);
     }
   }
@@ -1603,10 +1604,248 @@
   }
 }
 
+.modal {
+  display: none;
+
+  &__active {
+    display: block;
+  }
+
+  &__inner {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 
 
+  &__info {
+    width: 480px;
+    background-color: #fff;
 
+  }
+
+  &__title {
+    padding-top: 24px;
+    text-align: center;
+    color: $title;
+    text-transform: uppercase;
+    @extend %harabara;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 1.2px;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+  }
+
+  &__form {
+    padding: 0 30px;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #D7D7D7;
+    padding-left: 15px;
+    outline: none;
+
+    &::placeholder {
+      color: #A9A9A9;
+    }
+  }
+
+  &__input-box {
+    width: 250px;
+    margin-bottom: 0;
+  }
+
+  &__box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn-box {
+    width: 150px;
+    height: 39px;
+    border-radius: 4px;
+    color: $bg;
+    border: 2px solid $bg;
+    background-color: #fff;
+    text-transform: uppercase;
+    @extend %monserat-700;
+    cursor: pointer;
+  }
+
+  &__textarea {
+    width: 100%;
+    resize: none;
+    border-radius: 4px;
+    border: 1px solid #D7D7D7;
+    padding-left: 15px;
+    height: 80px;
+    padding-top: 5px;
+    margin-bottom: 30px;
+    outline: none;
+
+    &::placeholder {
+      color: #A9A9A9;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    background-color: $bg;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 50px;
+    margin-bottom: 70px;
+    cursor: pointer;
+  }
+
+}
+
+.contact-us {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    font-size: 24px;
+    @extend %monserat-700;
+    width: 530px;
+  }
+
+  &__request {
+    margin-right: 100px;
+    width: 490px;
+    padding: 30px 30px 70px 40px;
+    border-radius: 6px;
+    box-shadow: 0px 3px 16px 2px rgba(29, 51, 107, 0.15);
+  }
+
+  &__request-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #D7D7D7;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-left: 15px;
+    outline: none;
+  }
+
+  &__textarea {
+    width: 100%;
+    resize: none;
+    padding-left: 15px;
+    padding-top: 10px;
+    outline: none;
+    border: 1px solid #D7D7D7;
+    margin-bottom: 40px;
+    height: 80px;
+  }
+
+  &__btn {
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background-color: $bg;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  &__info {
+    display: flex;
+    gap: 170px;
+    margin-bottom: 170px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    @extend %monserat-400;
+    color: #242424;
+    font-size: 20px;
+    text-transform: capitalize;
+
+    svg {
+      margin-right: 15px;
+    }
+  }
+}
+
+.error {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__box {
+    text-align: center;
+    margin-top: -185px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $bg;
+    @extend %monserat-700;
+    line-height: 36px;
+    height: 40px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
 
 
 @import 'media';

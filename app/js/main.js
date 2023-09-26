@@ -52,6 +52,10 @@ $(function () {
     $('.join__item-link').toggleClass('join__item-link--active')
   });
 
+  $('.join__btn').on('click', function () {
+    $('.modal').toggleClass('modal__active')
+  });
+
 
  
 
